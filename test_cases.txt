@@ -1,0 +1,78 @@
+TC01 - View the initial catalog
+Input: Select menu option 1.
+Expected result: The catalog lists B01 Clean Code as Available, B02 Fluent Python as Borrowed, and B03 The Pragmatic Programmer as Available.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC02 - Borrow an available book
+Precondition: Start with the initial catalog.
+Input: Select menu option 2, then enter B01.
+Expected result: A success message says Clean Code was checked out successfully; B01 status changes to Borrowed.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC03 - Borrow a book that is already borrowed
+Precondition: B02 status is Borrowed in the initial catalog.
+Input: Select menu option 2, then enter B02.
+Expected result: An error message says Fluent Python is currently borrowed; its status remains Borrowed.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC04 - Borrow an unknown book ID
+Input: Select menu option 2, then enter B99.
+Expected result: An error message says book ID B99 does not exist; no catalog status changes.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC05 - Return a borrowed book
+Precondition: Start with the initial catalog.
+Input: Select menu option 3, then enter B02.
+Expected result: A success message says Fluent Python was returned; B02 status changes to Available.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC06 - Return a book that is already available
+Precondition: B01 status is Available in the initial catalog.
+Input: Select menu option 3, then enter B01.
+Expected result: An error message says Clean Code is already marked available; its status remains Available.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC07 - Return an unknown book ID
+Input: Select menu option 3, then enter B99.
+Expected result: An error message says book ID B99 does not exist; no catalog status changes.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC08 - Accept lowercase book ID
+Input: Select menu option 2, then enter b01.
+Expected result: The input is converted to uppercase; B01 is recognized and borrowed if it is Available.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC09 - Accept book ID with surrounding spaces
+Input: Select menu option 2, then enter spaces followed by B01 and spaces.
+Expected result: Surrounding spaces are removed; B01 is recognized and borrowed if it is Available.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC10 - Invalid menu choice
+Input: Enter menu choice 9.
+Expected result: An invalid-action error message appears and the menu is shown again.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC11 - Exit application
+Input: Select menu option 4.
+Expected result: The application prints the exit message and terminates the menu loop.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+TC12 - Empty book ID
+Input: Select menu option 2 or 3, then press Enter without typing a book ID.
+Expected result: An error message says book ID '' does not exist; the catalog remains unchanged.
+Actual result: To be recorded after execution.
+Status: NOT RUN
+
+LIMITATIONS
+The catalog is initialized in the source code and stored only in memory. Adding new books, searching by title/author, and saving changes to a file or database are not implemented in this version.

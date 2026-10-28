@@ -1,0 +1,41 @@
+DATA
+Create a catalog dictionary containing:
+- B01: Clean Code, author Robert C. Martin, status Available
+- B02: Fluent Python, author Luciano Ramalho, status Borrowed
+- B03: The Pragmatic Programmer, author Andrew Hunt, status Available
+
+ALGORITHM: DISPLAY CATALOG
+1. If the catalog has no books, print an empty-catalog error and stop this operation.
+2. Print the catalog heading.
+3. For each book, print its ID, title, and current status.
+4. Print a separator line.
+
+ALGORITHM: BORROW BOOK
+1. Display the current catalog.
+2. Ask the user to enter a book ID.
+3. Remove leading and trailing spaces and convert the ID to uppercase.
+4. If the ID does not exist, print an error and stop this operation.
+5. Find the selected book.
+6. If its status is Borrowed, print an error because it is already borrowed.
+7. Otherwise, change its status to Borrowed and print a success message.
+8. Display the updated catalog.
+
+ALGORITHM: RETURN BOOK
+1. Display the current catalog.
+2. Ask the user to enter a book ID.
+3. Remove leading and trailing spaces and convert the ID to uppercase.
+4. If the ID does not exist, print an error and stop this operation.
+5. Find the selected book.
+6. If its status is Available, print an error because it is already available.
+7. Otherwise, change its status to Available and print a success message.
+8. Display the updated catalog.
+
+ALGORITHM: MAIN MENU
+1. Repeat these steps until the user chooses Exit.
+2. Display options: View Catalog, Borrow Book, Return Book, Exit.
+3. Read the user's choice and remove surrounding spaces.
+4. If choice is 1, display the catalog.
+5. If choice is 2, run the Borrow Book algorithm.
+6. If choice is 3, run the Return Book algorithm.
+7. If choice is 4, print the exit message and stop the loop.
+8. For any other choice, print an invalid-choice error.

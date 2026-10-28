@@ -1,0 +1,28 @@
+ Problem & Objective
+
+The *Library Record Manager* is a Python-based console application designed to manage a local catalog of library books, track lending statuses, and maintain accurate circulation records in real time.
+
+---
+
+##  Features & Functionality
+
+* *Catalog Management*: Stores book records including Book ID, Title, Author, and Availability Status (Available or Borrowed).
+* *View Catalog*: Displays all library books along with their current circulation status in a clean, single-line format.
+* *Borrow Book*: Allows checking out an available book and toggles its status to Borrowed.
+* *Return Book*: Enables returning a borrowed book, restoring its status to Available.
+* *Validation & Edge Case Handling*:
+  * Prevents borrowing books that are already checked out.
+  * Rejects return attempts for books that are already marked available.
+  * Handles non-existent Book IDs gracefully without crashing.
+  * Normalizes user input casing automatically (e.g., b01 -> B01).
+
+---
+
+##  Data Structures & Logic Used
+
+1. *Dictionary of Dictionaries*: Used for storing catalog data for fast lookups by Book ID:
+   ```python
+   library_catalog = {
+       "B01": {"title": "Clean Code", "author": "Robert C. Martin", "status": "Available"},
+       "B02": {"title": "Fluent Python", "author": "Luciano Ramalho", "status": "Borrowed"}
+   }

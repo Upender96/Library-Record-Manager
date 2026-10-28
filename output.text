@@ -1,0 +1,26 @@
+=== Library Record Manager Menu ==-
+1. View Catalog
+2. Borrow Book
+3. Return Book
+4. Exit
+Enter your choice (1-4): 1
+Catalog:
+[B01] Clean Code - Available | [B02] Fluent Python - Borrowed | [B03] The Pragmatic Programmer - Available
+=== Library Record Manager Menu ===
+1. View Catalog
+2. Borrow Book
+3. Return Book
+4. Exit
+Enter your choice (1-4): 2
+Catalog:
+[B01] clean Code - Available | [B02] Fluent Python - Borrowed | [B03] The Pragmatic Programmer - Available
+Action: Borrow 3
+-> ERROR: Book ID 3' does not exist.
+-= Library Record Manager Menu -==
+1. View Catalog
+2. Borrow Book
+3. Return Book
+4. Exit
+Enter your choice (1-4): 4
+Exiting application. Have a great day!
+PS C: \Users \upender OneDrive \Documents \Python foundation›
